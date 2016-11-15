@@ -183,7 +183,8 @@
 			url:"http://www.vrserver.applinzi.com/aixianfeng/apihomehot.php",
 			async:true,
 			success:function(req){
-				var req = JSON.parse(req);					
+				var req = JSON.parse(req);	
+				console.log(req)
 				$(".hot_buy").html(baidu.template("hot_buy",req));
 				
 			}
