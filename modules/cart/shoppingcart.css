@@ -1,0 +1,213 @@
+@charset "utf-8";
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font:normal 0.1875rem "微软雅黑";
+} 
+
+body{
+	background-color:#efefef;
+	
+}
+.header_cart_title {
+	width:100%;
+	height:2.909375rem;
+	background-color:#f9fafd;
+	
+}
+.header_cart_title  h1{
+	font-size:0.46875rem;
+	text-align: center;
+	line-height:1.40625rem;
+	border-bottom:0.015625rem solid #e0e0e0;
+	font-weight:bold;
+}
+.header_cart_title a{
+	display:block;
+	color:#e64f1a;
+	width: 100%;
+	height: 1.40625rem;
+	line-height:1.40625rem;
+	background-color:#fff;
+	padding-left: 0.46875rem;
+	font-size:0.46875rem;
+}
+.give{
+	width:100%;
+	height:1.796875rem;
+	background-color:#fff;
+	color:#999;
+	margin-top:0.15625rem;
+	border-bottom:1px solid #e0e0e0;
+
+}
+.give p:first-of-type{
+	padding-top:0.15625rem;
+}
+.give p:first-of-type span:first-of-type{
+	display:inline-block;
+	width:0.125rem;
+	height:0.375rem;
+	border-radius:0.078125rem;
+	background-color:#ffd600; 
+	margin-left:0.421875rem;
+}
+.give p{
+	height:0.9375rem;
+	line-height:0.9375rem;
+	
+}
+.getthing{
+	width:100%;
+	height:1.796875rem;
+	background-color:#fff;
+	border-bottom:0.015625rem solid #e0e0e0;
+	line-height:1.796875rem;
+}
+.getthing p{
+	line-height:1.796875rem;
+	margin-left:0.46875rem;
+	margin-right:0.46875rem;
+	font-size:0.46875rem;
+}
+.getthing p a{
+	float:right;
+	line-height:1.796875rem;
+	font-size:0.46875rem;
+}
+.getthing p span{
+	color:#e64f1a;
+}
+.note{
+	width:100%;
+	height:1.796875rem;
+	background-color:#fff;
+	display: flex;
+	align-items:center;
+	padding-left:0.3125rem;
+	border-bottom:1px solid #e0e0e0;
+}
+.note form{
+	width:6.55rem;
+	height:1.025rem;
+	/*line-height:0.625rem;*/
+	border:0.015625rem solid #cecece;
+	border-radius:0.15625rem;
+	display: flex;
+	align-items:center;
+	margin-left:0.3125rem;
+	
+}
+.note form input{
+	height:0.46875rem;
+	line-height:0.625rem;
+	width:5.25rem; 
+	/*outline:none;*/
+	border:0;
+
+}
+.buylist_deail{
+	width:100%;
+	height:2.7515625rem;
+	display: flex;
+	align-items:center;
+	background-color:#fff;
+	border-bottom:1px solid #e0e0e0;
+	position:relative;
+
+}
+.buylist_deail .right{
+	width:0.9375rem;
+	height:0.8625rem;
+	background:url(../../images/right.png) no-repeat 0 center;
+	background-size:0.78125rem 0.78125rem;
+	margin-left:0.46875rem;
+}
+.buylist_deail  dl{
+	width:5.84375rem;
+	height:2.03125rem;
+	display: flex;
+}
+.buylist_deail  dl dt img{
+	width: 1.8625rem;
+	height:1.875rem;
+}
+.buylist_deail  dl dd p:nth-of-type(2){
+	margin-top:0.78125rem;
+}
+.buylist_deail  dl dd p{
+	font-size: 0.46875rem;
+
+}
+.buylist_deail .add{
+	width:3.40625rem;
+	height:1.359375rem;
+	position:absolute;
+	right:0.225rem;
+	bottom:0.3125rem;
+	/*border:0.015625rem solid red;*/
+	display: flex;
+	align-items:center;
+}
+.buylist_deail .add span:nth-of-type(1){
+	display: inline-block;
+	width:1.09375rem;
+	height: 1.09375rem;
+	background:url(../../images/reduce.jpg) no-repeat 0.078125rem center ;
+	background-size:0.98125rem 0.98125rem;
+}
+.buylist_deail .add span:nth-of-type(2){
+	display: inline-block;
+	width:1.09375rem;
+	height:1.09375rem;
+	text-align: center;
+	line-height:1.09375rem; 
+	}
+.buylist_deail .add span:nth-of-type(3){
+
+	display: inline-block;
+	width:1.09375rem;
+	height: 1.09375rem;
+	background:url(../../images/add.png) no-repeat -0.18125rem center;
+	background-size:0.98125rem 0.98125rem;
+	margin-left:0.3125rem;
+}
+.allcheck{
+	width:100%;
+	height:1.40625rem;
+	display: flex;
+	align-items:center;
+	background-color:#fff;
+}
+.allcheck div:first-of-type{
+	width:2.0625rem;
+	height:1.09375rem;
+	background:url(../../images/right.png) no-repeat 0 center;
+	background-size:0.78125rem 0.78125rem;
+	margin-left:0.46875rem;
+
+
+}
+.allcheck div:first-of-type p{
+	margin-left:0.625rem;
+	height:1.09375rem;
+	line-height:1.09375rem;
+	text-align:center;
+}
+.allcheck p span{
+	color: #ee8763;
+
+}
+.allcheck>p{
+	margin-left:0.46875rem;
+}
+.allcheck>span:last-of-type{
+	display:inline-block;
+	width: 3.1125rem;
+	height:1.40625rem;
+	line-height:1.40625rem;
+	background-color:#ffd600;
+	text-align: center;
+	margin-left:3.325rem;
+}

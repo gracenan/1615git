@@ -1,0 +1,192 @@
+<div id="page">
+	<!-- 头部 -->
+		<header class="header_home_title">
+			<div>
+				<img src="images/sao.jpg">
+				<span>扫一扫</span>
+			</div>
+			<div>
+				<h1>物美超市<img src="images/down.jpg"></h1>
+				
+			</div>
+			<div>
+				<a href="html/hotSearch.html"><img src="images/search.png"></br><span>搜索</span></a>
+				
+			</div>
+		</header>
+	<!-- 轮播图 -->
+		<div class="banner">
+			<!-- <img src="images/yxsg_banner.jpg"> -->
+			<img src="images/swiper1.jpg">
+			<!-- <img src="images/yxsg_goods_02.jpg"> -->
+			<!-- <img src="images/yxsg_goods_03.jpg"> -->
+		</div>
+	<!-- icon部分  -->
+		<div class="icon">
+			<div class="icon_first">
+				<!--<script type="text/javascript" id="icon">
+					<%for(var i in data.menu){
+						if(i<4){%>
+						<dl>
+							<dt><img src=<%=data.menu[i].activity.img%>></dt>
+							<dd><%=data.menu[i].activity.name%></dd>						
+						</dl>
+					<%}}%>
+				</script>-->
+				<!-- <dl>
+					<dt><img src="images/fkms.jpg"></dt>
+					<dd>疯狂秒杀</dd>					
+				</dl>
+				<dl>
+					<dt><img src="images/xhzg.jpg"></dt>
+					<dd>现货直供</dd>					
+				</dl>
+				<dl>
+					<dt><img src="images/dzx.jpg"></dt>
+					<dd>大闸蟹</dd>					
+				</dl> -->
+			</div>
+			<div class="icon_second">
+				<!--<script type="text/javascript" id="icon_two">
+					<%for(var i in data.menu){
+						if(i>3){%>
+						<dl>
+							<dt><img src=<%=data.menu[i].activity.img%>></dt>
+							<dd><%=data.menu[i].activity.name%></dd>						
+						</dl>
+					<%}}%>
+				</script>-->
+				<!-- <dl>
+					<dt><img src="images/sg.jpg"></dt>
+					<dd>水果</dd>					
+				</dl>
+				<dl>
+					<dt><img src="images/rp.jpg"></dt>
+					<dd>乳品</dd>					
+				</dl>
+				<dl>
+					<dt><img src="images/lw.jpg"></dt>
+					<dd>卤味</dd>					
+				</dl>
+				<dl>
+					<dt><img src="images/ls.jpg"></dt> -->
+					<!-- <dd>零食</dd>					 -->
+				<!-- </dl> -->
+			</div> 
+		</div>
+	<!-- 雾霾 -->
+		<div class="haze">
+			<a href="#"><img src="images/xianfeng.jpg"></a>
+			<a href=""><img src="images/haze.jpg"></a>
+			<span> 3M防霾口罩22.8元/3只  1小时闪送</span>
+		</div>
+	<!-- icon_three -->
+	<div class="icon_three">
+		<img src="images/ylr.jpg">
+		<img src="images/miy.jpg">
+		<img src="images/mb.jpg">
+	</div>
+	<!-- 天天特价部分 -->
+	<div class="icon_four">
+		<div>
+			<img src="images/tttj.jpg">
+			<img src="images/lsdjh.jpg">
+		</div>
+		<div>
+			<img src="images/yh.jpg">
+			<img src="images/jqdc.jpg">
+		</div>
+	</div>
+	<!-- 优选水果 -->
+	<div class="goodfruit">
+		<div class="goodfruit_title">
+			<span></span>
+			<span>优选水果</span>
+			<a href="#">更多   <span>></span></a>
+		</div>
+		<div class="goodfruit_banner">
+			<img src="images/goodfruit_banner.jpg">
+		</div>
+		<div class="goodfruit_deail">
+			<div>
+				<a href=""><img src="images/dazao.jpg"></a>
+				<p>爱蜂觅  冻枣</p>
+				<img src="images/jx.jpg"> 
+			   <img src="images/maiyi.jpg">
+			   <p>400-500g/盒</p>
+			   <p><span>￥14.6</span>
+			   <span>￥16</span></p>
+				<img class="add" src="images/add.png">
+			</div>
+			<div>
+				<a href=""><img src="images/daputao.jpg"></a>
+				<p>爱蜂觅.冻枣</p>
+				<img src="images/jx.jpg"> 
+			   <img src="images/maiyi.jpg">
+			   <p>400-500g/盒</p>
+			   <span>￥14.6</span>
+			   <span>￥16</span>
+			   <img class="add" src="images/add.png">
+			</div>
+			<div>
+				<a href=""><img src="images/dashiliu.jpg"></a>
+				<p>爱蜂觅.徐香猕</p>
+				<img src="images/jx.jpg"> 
+			   <img src="images/maiyi.jpg">
+			   <p>400-500g/盒</p>
+			   <span>￥14.6</span>
+			   <span>￥16</span>
+			   <img class="add" src="images/add.png">
+			</div>
+		</div>
+	</div>
+	<div class="hot_buy_title">
+			<span></span>
+			<span>蜂蜜热卖</span>
+			<span></span>
+		</div>
+	<div class="hot_buy">
+		<script type="text/javascript" id="hot_buy">
+		<%for(var i in data){%>
+		<dl>
+			<dt><img src=<%=data[i].img%>></dt>
+			<dd>
+				<p><%=data[i].name%></p>
+				<p><span><img src="images/jx.jpg"></span><span><%=data[i].pm_desc%></span></p>
+				<p><%=data[i].specifics%></p>
+				<p><span><%=data[i].price%></span><span><%=data[i].market_price%></span></p>				
+			</dd>
+		</dl>
+		<%}%>
+		</script>
+	</div>
+</div>
+<!--<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			type:"get",
+			url:"http://www.vrserver.applinzi.com/aixianfeng/apihome.php",
+			async:true,
+			success:function(req){
+				var req = JSON.parse(req);	
+				
+				$(".icon_first").html(baidu.template("icon",req));
+				$(".icon_second").html(baidu.template("icon_two",req));
+			}
+		})
+	})
+</script>-->
+	<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			type:"get",
+			url:"http://www.vrserver.applinzi.com/aixianfeng/apihomehot.php",
+			async:true,
+			success:function(req){
+				var req = JSON.parse(req);					
+				$(".hot_buy").html(baidu.template("hot_buy",req));
+				
+			}
+		})
+	})
+</script>

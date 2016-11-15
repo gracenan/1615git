@@ -1,0 +1,119 @@
+@charset "utf-8";
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font:normal 0.1875rem "微软雅黑";
+}
+body{
+	background-color:#efefef;
+	position:relative;
+}
+#page{
+	
+}
+header{
+	width:100%;
+	height:1.40625rem;
+	background-color:#f9fafd;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+
+}
+header a:first-of-type{
+	color:#9f9f9f;
+	display:inline-block;
+	width:0.390625rem;
+	height: 0.65625rem;
+	line-height: 0.65625rem;
+	font-size:0.484375rem;
+	/*height:0.734375rem;*/
+}
+header form span{
+	display: inline-block;
+	background:url(../images/load.png) no-repeat  0.234375rem 0.15625rem ;
+	width:0.78125rem;
+	height:0.5375rem;
+	background-size:0.5rem;
+
+}
+
+header form{	
+	width:6.3125rem;
+	height:0.88125rem;
+	border:0.015625rem solid #e0e0e0;
+	margin-left:0.9375rem;
+	margin-right: 0.7375rem;
+	border-radius:0.15625rem;
+	
+}
+header form input{
+	width:4.296875rem;
+	height:0.58125rem;
+	/*outline:none;*/
+	border: none;
+	background-color:#f9fafd;
+
+	
+}
+header a:last-of-type{
+	color:#777;
+
+}
+.things_deail{
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	margin-top:0.234375rem;
+}
+.things_deail dl{
+	width:4.59375rem;
+	height:7.09375rem;
+	background-color:#fff;
+}
+.things_deail dl dt{
+	width:3.5rem;
+	height: 2.984375rem;
+	margin:0.3125rem auto;
+}
+.things_deail dl dt img{
+	width:3.5rem;
+	height: 2.984375rem;
+
+}
+.things_deail dl dd{
+	line-height:0.903125rem;
+	margin-left:0.234375rem;
+}
+.things_deail dl dd:nth-of-type(2) img{
+	width:0.9375rem;
+	height:0.546875rem;
+
+}
+.things_deail dl dd:nth-of-type(3){
+	color:#9b9b9b;
+}
+.things_deail dl dd:nth-of-type(4) span:first-of-type{
+	color: #ff3800;
+}
+.things_deail dl dd:nth-of-type(4) span:nth-of-type(2){
+	color: #9b9b9b;
+	text-decoration: line-through;
+}
+.things_deail dl dd:nth-of-type(4) span:nth-of-type(3){
+	color: #ff3800;
+	margin-left:1.0125rem;
+	
+}
+.cart{
+	width:2.03125rem;
+	height:2.03125rem;
+	position:absolute;
+	bottom:0.15625rem;
+	right:0;
+	border-radius:1.08125rem;
+	background:#ffd600 url(../images/cart.png) no-repeat 0.15625rem center;
+	background-size: 1.71875rem 1.71875rem;
+	/*border:0.015625rem solid red;*/
+}

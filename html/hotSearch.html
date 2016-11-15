@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>热门搜索</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/hotSearch.css">
+	<script type="text/javascript" src="../js/jquery-3.1.0.min.js" ></script>
+</head>
+<body>
+		<header>
+			<a href=""><</a>
+			<form>
+				<span></span>
+				<input type="text" placeholder="请输入商品">
+			</form>
+			<a href="">搜索</a>
+		</header>
+		<div class="hot_search">
+			<span>热门搜索</span>
+			<ul>
+				<li><a>大闸蟹</a></li>
+				<li><a>水</a></li>
+				<li><a>中秋月饼</a></li>
+				<li><a>酸奶</a></li>
+				<li><a>啤酒</a></li>
+				<li><a>西瓜</a></li>
+				<li><a>大荔枝</a></li>
+				<li><a>贝儿蛋糕</a></li>
+				<li><a>冬枣</a></li>
+			</ul>
+		</div>
+		<div class="old_record">
+			<span>历史记录</span>
+			<ul>
+				<li><a>大闸蟹</a></li>
+				<li><a>牛奶</a></li>
+				<li><a>猕猴桃</a></li>
+				<li><a>酸奶</a></li>
+				<li><a>啤酒</a></li>
+				<li><a>西瓜</a></li>
+			</ul>
+			<p>清空历史</p>
+		</div>
+</body>
+<script type="text/javascript">
+	document.documentElement.style.fontSize=innerWidth/10+"px";
+	window.onresize=function(){
+		document.documentElement.style.fontSize=innerWidth/10+"px";
+	}
+</script>
+<script>
+	
+	$("header a").eq(0).on("touchstart",function(){
+		window.history.back();
+	})
+	
+</script>
+</html>
