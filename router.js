@@ -16,6 +16,7 @@ define(['backbone'],function(){
           require(['./modules/home/home.js'],function(home){
             home.render();
             home.getData();
+            home.bindEvent();
           })
       },
       marketFn: function() {
