@@ -24,7 +24,7 @@ define(['backbone'],function(){
           market.render();
          market. marketAside();
 //       market.add();
-         market.getData();
+         market.getData("热销榜");
         })
       },
       bookFn: function() {

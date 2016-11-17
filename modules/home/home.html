@@ -15,12 +15,14 @@
 			</div>
 		</header>
 	<!-- 轮播图 -->
-		<div class="banner">
-			<!-- <img src="images/yxsg_banner.jpg"> -->
-			<img src="images/swiper1.jpg">
-			<!-- <img src="images/yxsg_goods_02.jpg"> -->
-			<!-- <img src="images/yxsg_goods_03.jpg"> -->
-		</div>
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	    	
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	</div>
+		
 	<!-- icon部分  -->
 		<div class="icon">
 			<div class="icon_first">
@@ -146,21 +148,26 @@
 			<span></span>
 		</div>
 	<div class="hot_buy">
-		<!--<script type="text/html" id="hot_buy">
+		<script type="text/html" id="hot_buy">
 		<%for(var i in data){%>
 		<dl>
-			<dt><img src=<%=data[i].img%> /> </dt>
+			<dt><img src=<%=data[i].img%>/> </dt>
 			<dd>
 				<p><%=data[i].name%></p>
-				<p><span><img src="images/jx.jpg"></span><span><%=data[i].pm_desc%></span></p>
+				<p><span><img src="images/jx.jpg"></span>
+					<%if(data[i].pm_desc!=""){%>
+						<span><%=data[i].pm_desc%></span>
+					<%}%>
+					</p>
 				<p><%=data[i].specifics%></p>
 				<p><span><%=data[i].price%></span><span><%=data[i].market_price%></span></p>				
 			</dd>
 		</dl>
 		<%}%>
-		</script>-->
+		</script>
 	</div>
 </div>
+
 <!--<script type="text/javascript">
 	$(function(){
 		$.ajax({
@@ -185,7 +192,7 @@
 			success:function(req){
 				var req = JSON.parse(req);	
 				console.log(req)
-//				$(".hot_buy").html(baidu.template("hot_buy",req));
+				$(".hot_buy").html(baidu.template("hot_buy",req));
 				
 			}
 		})

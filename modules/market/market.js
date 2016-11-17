@@ -15,48 +15,42 @@ define(['text!./market.html','css!./market.css'],function(html){
 				var str="";
 				$.each(req.data,function(i,elem){
 					str+="<dl><dt><img src='"+elem.img+"'/></dt>";
-					str+="<dd>"+elem.name+"</dd>";
-					str+="<dd><img src='images/jx.jpg'><span>"+elem.pm_desc+"</span></dd>";
-					str+="<dd>"+elem.specifics+"</dd><dd><span>"+
+					str+="<dd>"+elem.name+"</dd><dd><img src='images/jx.jpg'>";
+					if( elem.pm_desc != ""){
+						str+="<span>"+elem.pm_desc+"</span>";
+					}
+					str+="</dd><dd>"+elem.specifics+"</dd><dd><span>"+
 					elem.price+"</span><span>"+elem.market_price+"</span></dd>";
 					str+="<dd><img src='images/add.png' class='ad'></dd>";
-					str+="<dd><div class='add'style='display:none'><img src='images/reduce.jpg' class='reduce_num'/><span>1</span><img src='images/add_num.png' class='add_num'/></div></dd></dl>";
+					str+="<dd><div class='add'style='display:none'><img src='images/reduce.jpg' class='reduce_num'/><span>0</span><img src='images/add_num.png' class='add_num'/></div></dd></dl>";
 				});
 				$(".market_thingslist").html(str);
+				
 				 //右边的点击 +号 出现 .add  
-			$.each($(".ad"), function(i,elem) {
-				$(elem).on("touchstart",function(){	
-					$(".add").css({"display":"none"});
-					$(".add").eq(i).css({"display":"block"});
-					
-    		console.log(this); 
-    	var num=1;
-    	//点击右边的+号
-    	$(".add_num").on("touchstart",function(){
-    		num++;
-    		$(".add span").html(1);
-    		$(".add span").eq(i).html(num);
-    	})
-    	//点击左边的减号
-    	$(".reduce_num").on("touchstart",function(){
-    		num--;   		
-    		if(num<=0){
-    			
-//  			$(".add span").html(1);
-    		
-    		$(".add").css({"display":"none"})
-    		}
-//  		$(".add span").html(num);
-    		$(".add span").eq(i).html(num);
-    	
-    			 })	
-    		   })
-    	
-		     });
-    	   			
-			}
-		});
-		
+				$.each($(".ad"), function(i,elem) {
+					$(elem).on("touchstart",function(){						
+						$(".add").eq(i).show();
+						$(this).parents("dl").find(".add_num").trigger("touchstart");
+	    		   })
+				});	
+				console.log($(".add_num"))
+				$(".add_num").on("touchstart",function(e){    
+					var num = parseInt($(this).siblings("span").html());
+					num++;
+					console.log(e.target);
+					$(this).siblings("span").html(num);
+				})
+						//点击左边的减号
+				$(".reduce_num").on("touchstart",function(){
+				var num = parseInt($(this).siblings("span").html());
+					num--;   		
+					if(num<=0){   			 		   		
+						$(this).parents(".add").hide();
+					}		
+					$(this).siblings("span").html(num);
+				})
+				}
+			});
     }
 
     function bindEvent(){

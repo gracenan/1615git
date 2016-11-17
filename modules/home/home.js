@@ -5,7 +5,6 @@ define(['text!./home.html','css!./home.css'],function(html){
 
     //ajax
     function getData(){
-//  	alert("aaaaaa");
 		$.ajax({
 			type:"get",
 			url:"http://www.vrserver.applinzi.com/aixianfeng/apihome.php",
@@ -70,9 +69,8 @@ define(['text!./home.html','css!./home.css'],function(html){
 //					}
 										
 				});
-//				alert(str);
+
 				//给页面元素增加内容
-//				alert(icon_first);
 				$(".icon_first").html(icon_first);
 								
 				//这是把四个dl放在了第一个叫做icon_sec的div里；
@@ -82,7 +80,22 @@ define(['text!./home.html','css!./home.css'],function(html){
 			
 		});
 		
-		
+		$.ajax({
+			type:"get",
+			url:"http://www.vrserver.applinzi.com/aixianfeng/apihome.php",
+			async:true,
+			success:function(req){
+				var req=JSON.parse(req);
+				var slide=req.data.slide;
+				var str="";
+				for(var i in slide){
+				str+="<img src='"+slide[i].activity.img+"' class='swiper-slide'/>"; 	   
+				} 
+				console.log(str);
+				$(".swiper-wrapper").html(str);
+				swiper();	
+			}
+		});
     }
 
     function bindEvent(){
@@ -100,20 +113,20 @@ define(['text!./home.html','css!./home.css'],function(html){
 
 
     	})
-//		$("header_home_title").children(0).on("touchstart",function(){
-//		alert('---')
-//		wx.scanQRCode({
-//	    needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-//	    scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
-//	    success: function (res) {
-//	    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
-//	}
-//	});
-//		})
+
     }
 
     function swiper(){
-      
+      var mySwiper = new Swiper ('.swiper-container', {
+//				    direction: 'vertical',
+				    loop: true,
+				    //隔多少秒后跳到下一个banner
+				    autoplay:1000,
+				    //如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
+				    autoplayDisableOnInteraction:false,
+				    // 如果需要分页器
+				    pagination: '.swiper-pagination'
+				})
     }
 
     return {
