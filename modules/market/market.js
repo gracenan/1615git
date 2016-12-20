@@ -14,7 +14,7 @@ define(['text!./market.html','css!./market.css'],function(html){
 //				alert(req.data);
 				var str="";
 				$.each(req.data,function(i,elem){
-					str+="<dl><dt><img src='"+elem.img+"'/></dt>";
+					str+="<dl><dt><img class='lazy' data-original='"+elem.img+"'/></dt>";
 					str+="<dd>"+elem.name+"</dd><dd><img src='images/jx.jpg'>";
 					if( elem.pm_desc != ""){
 						str+="<span>"+elem.pm_desc+"</span>";
@@ -24,7 +24,13 @@ define(['text!./market.html','css!./market.css'],function(html){
 					str+="<dd><img src='images/add.png' class='ad'></dd>";
 					str+="<dd><div class='add'style='display:none'><img src='images/reduce.jpg' class='reduce_num'/><span>0</span><img src='images/add_num.png' class='add_num'/></div></dd></dl>";
 				});
+				
 				$(".market_thingslist").html(str);
+//				console.log($(".market_thingslist img.lazy"));
+				$(".market_thingslist img.lazy").lazyload({
+					container: $(".market_thingslist")
+				});
+				
 				
 				 //右边的点击 +号 出现 .add  
 				$.each($(".ad"), function(i,elem) {
@@ -33,7 +39,7 @@ define(['text!./market.html','css!./market.css'],function(html){
 						$(this).parents("dl").find(".add_num").trigger("touchstart");
 	    		   })
 				});	
-				console.log($(".add_num"))
+//				console.log($(".add_num"))
 				$(".add_num").on("touchstart",function(e){    
 					var num = parseInt($(this).siblings("span").html());
 					num++;
@@ -48,7 +54,7 @@ define(['text!./market.html','css!./market.css'],function(html){
 						$(this).parents(".add").hide();
 					}		
 					$(this).siblings("span").html(num);
-				})
+					})
 				}
 			});
     }
@@ -62,15 +68,16 @@ define(['text!./market.html','css!./market.css'],function(html){
     }
     //左边的侧边栏的小黄色竖条条；
     function marketAside(){
-    	var li=$("li");   	
+    	var li=$("li");  
+    	var lastLeft=parseFloat($("aside span").css("top"));
     	$.each(li,function(i,elem) {  		
     		$(elem).on("touchstart",function(){
-    			li.removeClass("border_left");
-    			$(this).addClass("border_left");
+//  			li.removeClass("border_left");
+//  			$(this).addClass("border_left");
+				$("aside span").css("top",i*9+"%");
     			$("li").css("background-color","#f8f8f8");
     			$(this).css("background-color","#fff"); 
-    			
-    			getData($(elem).text());
+       			getData($(elem).text());
     		})
     	});
     }

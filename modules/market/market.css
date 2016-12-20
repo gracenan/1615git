@@ -41,6 +41,7 @@ body{
  	height:14.25rem;
  	overflow-y: auto;
  	float:left;	
+ 	position:relative;
  }
  
  aside ul li{
@@ -53,8 +54,20 @@ body{
  	text-align:center;
  	/*border-left:10px solid #ffd600;*/
  }
-.border_left{
-	border-left:10px solid #ffd600;
+/*.border_left{
+	
+	border-left:0.15625rem solid #ffd600;
+}*/
+aside>.border_left{
+	display:inline-block;
+	width:0.096875rem ;
+	height:1.28125rem;
+	background-color:#ffd600;
+	position:absolute;
+	left:0;
+	top:0;
+	/*z-index:2;*/
+	
 }
 .all_style{
 	float:right;

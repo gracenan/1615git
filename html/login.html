@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" href="../css/login.css" />
+		<!--<script type="text/javascript" src="../js/login.js" ></script>-->
+		<title></title>
+	</head>
+	<body>
+		<div id="page">
+			<header class="header_login_title">
+				<a> < </a>
+				<span>手机验证</span>
+			</header>
+			<div class="bg_phone">
+				<p>为了方便您及时查询订单信息，鲜蜂侠需要验证您的手机号为查询帐号</p>
+			</div>
+			<div class="login_input">
+				<form action="" method="post">
+					<div class="username">
+						<input type="text" placeholder="手机号码" id="tel"/>
+						<span id="send">发送验证码</span>
+					</div>
+					<div class="pwd">
+						<input type="password" placeholder="短信验证码"id="code"/>
+					</div>
+					<div class="sub">确定</div>
+				</form>
+				
+			</div>
+			<div  class="empty_tel">
+				<img src="../images/tel.jpg" class="tel"/>
+			</div>
+			<div  class="error_tel">
+				<img src="../images/error_tel.jpg"/>
+			</div>
+			<div  class="error_code">
+				<img src="../images/error_code.jpg"/>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		document.documentElement.style.fontSize=innerWidth/10+"px";
+		window.onresize=function(){
+			document.documentElement.style.fontSize=innerWidth/10+"px";
+		}
+</script>
+<script>
+		//电话 密码元素节点
+	var tel=document.getElementById("tel");
+	var code=document.getElementById("code");
+	
+	//发送验证码
+	var send=document.getElementById("send");
+	var sub=document.getElementsByClassName("sub");
+	
+	
+	var empty_tel=document.getElementsByClassName("empty_tel");
+	var error_tel=document.getElementsByClassName("error_tel");
+	var error_code=document.getElementsByClassName("error_code");
+	//电话正则表达式
+	var tel_r=/^1[34578]\d{9}$/;
+	//如果电话号为空，点击发送验证码 提示手机号码不能为空；
+		send.addEventListener("touchstart",function(){
+			var timer=setTimeout(start,2000);
+	 	if(tel.value==""){
+	 		empty_tel[0].style.display="block";		
+	 	}
+	 	else if(tel_r.test(tel.value)){
+//			error_tel[0].style.display="block";
+	 	}else{
+	 		error_tel[0].style.display="block";
+	 	}
+	 	function start(){
+	   		empty_tel[0].style.display="none";
+	   		error_tel[0].style.display="none";
+	   	}
+   			
+		})
+		
+		sub[0].addEventListener("touchstart",function(){
+			
+			var timer=setTimeout(start,2000);
+		 	if(tel.value==""){
+		 		empty_tel[0].style.display="block";		
+		 	}
+		 	else if(code.value==""){
+		 		error_code[0].style.display="block";		
+		 		
+		 	}
+		 	else if(tel_r.test(tel.value)){
+//			error_tel[0].style.display="block";
+	 		}
+		 	else{
+		 	error_tel[0].style.display="block";
+	 		}
+		 	function start(){
+		   		empty_tel[0].style.display="none";
+		   		error_tel[0].style.display="none";
+		   		error_code[0].style.display="none";
+		   	}
+	})
+
+</script>
+</html>

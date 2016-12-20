@@ -5,14 +5,21 @@ require.config({
     'underscore':'lib/underscore',
     'text':'lib/text',
     'css':'lib/css',
-    'swiper':'lib/swiper-3.3.1.min'
+    'swiper':'lib/swiper-3.3.1.min',
+    'baiduTemplate':'js/baiduTemplate',
+    'jquery.lazyload':'lib/jquery.lazyload' 
+  },
+  shim : {
+  	'jquery.lazyload' : {
+  		 deps: ['jquery']
+  	}
   }
 });
-
-require(['jquery','backbone','./router.js','swiper'],function($,Backbone){
+//Path里边写进入后，要在下面的依赖部分写进去
+require(['jquery','backbone','./router.js','swiper','baiduTemplate','jquery.lazyload'],function($,Backbone){
  Backbone.history.start();
  
-
+//底部的footer部分
  $("footer dl").eq(0).on("touchstart",function(){
 		clearColor();
 		$(this).children("dt").html('<img src="images/home_color.png">');

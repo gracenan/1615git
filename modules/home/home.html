@@ -1,4 +1,4 @@
-<div id="page">
+<div id="homepage">
 	<!-- 头部 -->
 		<header class="header_home_title">
 			<div>
@@ -111,7 +111,7 @@
 		</div>
 		<div class="goodfruit_deail">
 			<div>
-				<a href=""><img src="images/dazao.jpg"></a>
+				<a href=""><img class="lazy" data-original="images/dazao.jpg"></a>
 				<p>爱蜂觅  冻枣</p>
 				<img src="images/jx.jpg"> 
 			   <img src="images/maiyi.jpg">
@@ -121,7 +121,7 @@
 				<img class="add" src="images/add.png">
 			</div>
 			<div>
-				<a href=""><img src="images/daputao.jpg"></a>
+				<a href=""><img class="lazy" data-original="images/daputao.jpg"></a>
 				<p>爱蜂觅.冻枣</p>
 				<img src="images/jx.jpg"> 
 			   <img src="images/maiyi.jpg">
@@ -131,7 +131,7 @@
 			   <img class="add" src="images/add.png">
 			</div>
 			<div>
-				<a href=""><img src="images/dashiliu.jpg"></a>
+				<a href=""><img class="lazy" data-original="images/dashiliu.jpg"></a>
 				<p>爱蜂觅.徐香猕</p>
 				<img src="images/jx.jpg"> 
 			   <img src="images/maiyi.jpg">
@@ -151,7 +151,7 @@
 		<script type="text/html" id="hot_buy">
 		<%for(var i in data){%>
 		<dl>
-			<dt><img src=<%=data[i].img%>/> </dt>
+			<dt><img class="lazy" data-original=<%=data[i].img%>/> </dt>
 			<dd>
 				<p><%=data[i].name%></p>
 				<p><span><img src="images/jx.jpg"></span>
@@ -183,7 +183,7 @@
 		})
 	})
 </script>-->
-	<script type="text/javascript">
+<script type="text/javascript">
 	$(function(){
 		$.ajax({
 			type:"get",
@@ -193,7 +193,8 @@
 				var req = JSON.parse(req);	
 				console.log(req)
 				$(".hot_buy").html(baidu.template("hot_buy",req));
-				
+				console.log($("#homepage img.lazy"));
+				$("#homepage img.lazy").lazyload();
 			}
 		})
 	})

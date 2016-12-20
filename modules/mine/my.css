@@ -76,7 +76,6 @@ body{
 	float: left;
 	height:1.0625rem;
 	line-height:1.0625rem; 
-	
 	width: 50%;
 
 }
@@ -84,7 +83,7 @@ body{
 color:#fff;
 font-size:0.390625rem;
 	padding-left:1.9625rem;
-}
+}       
 .header_my_title ul li:first-of-type{
 background: url(../../images/dian.png) no-repeat 0.8125rem center;
 background-size:0.58125rem 0.58125rem;
@@ -207,4 +206,16 @@ background-size:0.58125rem 0.58125rem;
 }
 .about dl dd{
 	margin-top:0.15625rem;
+}
+.out{
+	width:100%;
+	height:0.8rem;
+	line-height:0.8rem;
+	background-color:#fff;
+	margin-top:0.766666667rem;
+	text-align:center;
+}
+.my_all{
+	height:18.6666667rem;
+	overflow-y: auto;
 }

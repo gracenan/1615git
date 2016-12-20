@@ -1,0 +1,143 @@
+@charset "utf-8";
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font:normal 0.1875rem "微软雅黑";
+} 
+
+body{
+	background-color:#efefef;
+	
+}
+#page{
+	position:relative;
+	height:15rem;
+}
+.header_login_title{
+	width:100%;
+	height:1.40625rem;
+	background-color:#f9fafd;
+	display:flex;
+	align-items:center;
+	/*justify-content:center;*/
+	
+}
+.header_login_title>a{
+	margin-left:0.55625rem;
+	font-size:0.78125rem;
+}
+.header_login_title>span{
+	margin-left:2.9375rem;
+	margin-right:2.9375rem;
+	font-size: 0.525rem;
+	color:#000;
+	font-weight:bold;
+}
+.bg_phone{
+	width:100%;
+	height: 2.9rem;
+	background:#ffd600 url(../images/verify_bg.png) no-repeat;
+	background-size: auto 80%;
+	position:relative;
+	
+}
+.bg_phone p{
+	position:absolute;
+	white-space:pre-wrap;
+	width:55%;
+	top:0.7rem;
+	right:0;
+	font-size:0.30125rem;
+}
+.login_input{
+	width:100%;
+	height:3.05625rem;
+	background-color:#fff;
+}
+.login_input form{
+	height:3.05625rem;
+}
+.login_input form .username{
+	height:50%;
+	width:100%;
+	border-bottom:1px solid #e0e0e0;
+	display:flex;
+	align-items:center;
+}
+.login_input form .username input{
+	height:0.8rem;
+	margin-left:1rem;
+	border:0;
+	outline:none;
+	font-size:0.5rem;
+	
+}
+.login_input form .pwd{
+	width:100%;
+	height:50%;
+	display:flex;
+	align-items:center;
+		
+}
+.login_input form .pwd input{
+	height:0.8rem;
+	margin-left:1rem;
+	border:0;
+	outline:none;
+	font-size:0.5rem;
+}
+.login_input .username span{
+	background-color:#ffd600;
+	padding:0.2rem 0.3rem;
+	border-radius:0.1rem;
+}
+.sub{
+	background-color:#ffd600;
+	width:90%;
+	height:1.2rem;
+	margin:0 auto;
+	text-align:center;
+	line-height:1.2rem;
+	margin-top:1.5rem;
+	border-radius:0.1rem;
+	font-size:0.5rem;
+}
+input:-webkit-autofill { 
+	-webkit-box-shadow: 0 0 0px 1000px white inset; 
+ 
+}
+.empty_tel{
+	width:131px;
+	height:82px;
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	display:none;
+}
+.error_tel{
+	width:131px;
+	height:82px;
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	display:none;
+}
+.error_code{
+	width:131px;
+	height:82px;
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	display:none;
+}
+

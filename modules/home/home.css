@@ -10,7 +10,7 @@ body{
 	background-color:#efefef;
 	
 }
-#page .header_home_title{
+.header_home_title{
 	width:100%;
 	height:1.40625rem;
 	background-color:#ffd600;
@@ -19,46 +19,42 @@ body{
 	justify-content:space-between;
 
 }
-#page .header_home_title div:nth-of-type(1){
+.header_home_title div:nth-of-type(1){
 	padding-left:0.15625rem;
 
 }
-#page .header_home_title div:nth-of-type(1) img{
+.header_home_title div:nth-of-type(1) img{
 	width:0.546875rem;
 	height: 0.5625rem;
 	margin-left:0.1875rem;
 	
 }
-#page .header_home_title span{
+.header_home_title span{
 	display:block;
 }
-#page .header_home_title div:nth-of-type(2) h1{
+.header_home_title div:nth-of-type(2) h1{
 	/*font-weight:bold;*/
 	font-size: 0.46875rem;
 	/*background: red;*/
 }
-#page .header_home_title div:nth-of-type(3){
+.header_home_title div:nth-of-type(3){
 	padding-right:0.15625rem;
 }
-#page .header_home_title div:nth-of-type(3) img{
+.header_home_title div:nth-of-type(3) img{
 	width:0.625rem;
 	height: 0.625rem;
 }
-/*#page .banner img{
-	width:10.0rem;
-	height:5.0rem;
 
-}*/
-#page .swiper-container{
+.swiper-container{
 	width:100%;
 	height: 3.71875rem;
 }
-#page .icon{
+.icon{
 	height:4.890625rem;
 	margin-top:0.546875rem;
 	background-color:#fff;
 }
-#page .icon div{
+.icon div{
 	width: 100%;
 	display: flex;
 	height:50%;
@@ -69,18 +65,18 @@ body{
 	width:1.9rem;
 	height: 1.684375rem;
 }*/
-#page .icon div dl dt img{
+.icon div dl dt img{
 	width:1.75rem;
 	height: 1.484375rem;
 }
-#page .icon div dl{
+.icon div dl{
 	text-align: center;
 	/*width: 0.9375rem;*/
 }
-#page .icon div dl dd{
+.icon div dl dd{
 	text-align: center;
 }
-#page .haze{
+.haze{
 	width:100%;
 	height:1.015625rem;
 	background-color: #fff;
@@ -88,82 +84,82 @@ body{
 	display: flex;
 	align-items:center;
 }
-#page .haze>a:nth-of-type(1){
+.haze>a:nth-of-type(1){
 	padding:0.140625rem 0.15625rem;
 	
 	border-right:2px solid #e0e0e0;
 	
 
 }
-#page .haze a:nth-of-type(1) img{
+.haze a:nth-of-type(1) img{
 	width:1.9375rem;
 	height:0.578125rem;
 
 
 }
-#page .haze a:nth-of-type(2){
+.haze a:nth-of-type(2){
 	margin-left:0.15625rem;
 }
-#page .haze a:nth-of-type(2) img{
+.haze a:nth-of-type(2) img{
 	width:0.78125rem;
 	height:0.46875rem;
 
 } 
-#page .haze span{
+.haze span{
 	color:#999;
 	margin-left:0.15625rem;
 }
-#page .icon_three{
+.icon_three{
 	width:100%;
 	height:4.375rem;
 	display:flex;
 	margin-top:0.546875rem;
 
 }
-#page .icon_three img{
+.icon_three img{
 	width:3.3333rem;
 	height:4.375rem;
 	border-right:1px solid #e0e0e0;
 }
-#page .icon_four{
+ .icon_four{
 	width:100%;
 	height:4.0625rem;
 	margin-top:0.546875rem;
 }
-#page .icon_four div:first-of-type{
+.icon_four div:first-of-type{
 	width:100%;
 	height:2.0rem;
 	display: flex;
 	border-bottom:0.015625rem solid red;
 
 }
-#page .icon_four div img{
+.icon_four div img{
 	width:50%;
 	height:2.0rem;
 }
-#page .icon_four div:last-of-type{
+.icon_four div:last-of-type{
 	width:100%;
 	height:2.0rem;
 	display: flex;
 
 }
-#page .icon_four div img{
+ .icon_four div img{
 	width:50%;
 	height:2.0rem;
 }
 /*优选水果*/
-#page .goodfruit{
+.goodfruit{
 	width:100%;
 	height:9.9375rem;
 	background-color:#fff;
 	margin-top:0.546875rem;
 }
-#page .goodfruit_title{
+.goodfruit_title{
 
 	height:1.25rem;
 	line-height:1.25rem;
 }
-#page .goodfruit_title>span:first-of-type{
+.goodfruit_title>span:first-of-type{
 	display: inline-block;
 	width:0.25rem;
 	height:0.46875rem;
@@ -172,12 +168,12 @@ body{
 	margin-right:0.234375rem;
 
 }
-#page .goodfruit_title>span:nth-of-type(2){
+.goodfruit_title>span:nth-of-type(2){
 	color:#f38631;
 	font-weight:bold;
 	font-size:0.46875rem;
 }
-#page .goodfruit_title a{
+ .goodfruit_title a{
 	float:right;
 	display:block;
 	line-height:1.25rem;
@@ -186,10 +182,10 @@ body{
 	white-space:pre;
 	font-size:0.3125rem;
 }
-#page .goodfruit_title>a>span{
+.goodfruit_title>a>span{
 	color:#5d5d5d;
 }
-#page .goodfruit_banner img{
+.goodfruit_banner img{
 	display:block;
 	width:9.46875rem;
 	height:2.375rem;
@@ -321,3 +317,14 @@ body{
 	text-decoration:line-through;
 	margin-left:0.15625rem;
 }
+
+.swiper-container{
+	position:relative;
+}
+.swiper-pagination{
+	width:2rem;
+	position:absolute;
+	right:0.5rem;
+	bottom:0.5rem;
+}
+

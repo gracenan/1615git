@@ -1,55 +1,54 @@
-define(['backbone'],function(){
-  
-  var Router = Backbone.Router.extend({
+define(['backbone'], function() {
 
-      routes: {
-        "home": "homeFn",
-        "market": "marketFn",
-        "book": "bookFn",
-        "cart": "cartFn",
-        "mine": "mineFn",
-      
-        "*actions":'defaultAction'
-      },
+	var Router = Backbone.Router.extend({
 
-      homeFn: function() {
-          require(['./modules/home/home.js'],function(home){
-            home.render();
-            home.getData();
-            home.bindEvent();
-          })
-      },
-      marketFn: function() {
-        require(['./modules/market/market.js'],function(market){
-          market.render();
-         market. marketAside();
-//       market.add();
-         market.getData("热销榜");
-        })
-      },
-      bookFn: function() {
-   		require(['./modules/book/book.js'],function(book){
-          book.render();
-          book.getData();
-        })
-      },
-      cartFn: function() {
-		require(['./modules/cart/shoppingcart.js'],function(cart){
-          cart.render();
-        })
-      },
-      mineFn: function() {
-		require(['./modules/mine/mine.js'],function(cart){
-          cart.render();
-        })
+		routes: {
+			"home": "homeFn",
+			"market": "marketFn",
+			"book": "bookFn",
+			"cart": "cartFn",
+			"mine": "mineFn",
+			"*actions": 'defaultAction'
+		},
 
-      },
-         
-      defaultAction:function(){
-        location.hash = 'home'
-      }
-      
-  });
+		homeFn: function() {
+			require(['./modules/home/home.js','./lib/jquery.fly.js'], function(home) {
+				home.render();
+				home.getData();
+				home.bindEvent();
+			})
+		},
+		marketFn: function() {
+			require(['./modules/market/market.js'], function(market) {
+				market.render();
+				market.marketAside();
+				//       market.add();
+				market.getData("热销榜");
+			})
+		},
+		bookFn: function() {
+			require(['./modules/book/book.js'], function(book) {
+				book.render();
+				book.getData();
+			})
+		},
+		cartFn: function() {
+			require(['./modules/cart/shoppingcart.js'], function(cart) {
+				cart.render();
+			})
+		},
+		mineFn: function() {
+			require(['./modules/mine/mine.js'], function(cart) {
+				cart.render();
+			})
 
-  var router = new Router();
+		},
+
+		defaultAction: function() {
+			location.hash = 'home'
+		}
+
+	});
+
+	var router = new Router();
 })

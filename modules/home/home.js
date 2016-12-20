@@ -79,7 +79,7 @@ define(['text!./home.html','css!./home.css'],function(html){
 			}
 			
 		});
-		
+		//swiper轮播图
 		$.ajax({
 			type:"get",
 			url:"http://www.vrserver.applinzi.com/aixianfeng/apihome.php",
@@ -102,17 +102,36 @@ define(['text!./home.html','css!./home.css'],function(html){
     
     	$("#saoyisao").click(function(){
     	
-//  		alert('------')
+    		alert('------')
     		wx.scanQRCode({
 		    needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
 		    scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
 		    success: function (res) {
 		    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
-		}
+			}
 		});
 
-
     	})
+    	
+  	//点击+ 有动画效果
+    $('.add').on('click', addCart);
+	    function addCart(event) {
+	    	var src = $(this).siblings("a").find("img").attr("src");
+	        var offset = $('.ss').offset(), flyer = $('<img style="width:100px;height=100px;" src='+ src +'/>');
+	        flyer.fly({
+	            start: {
+	                left:event.clientX, 
+	                top:event.clientY
+	            },
+	            end:{
+	                left:offset.left,
+	                top:offset.top,
+	                width: 10,
+	                height: 10
+	            }
+	        });
+	    }
+
 
     }
 
@@ -130,9 +149,10 @@ define(['text!./home.html','css!./home.css'],function(html){
     }
 
     return {
-      render:render,
+      	render:render,
      	getData:getData,
-     	bindEvent:bindEvent
+     	bindEvent:bindEvent,
+     	swiper:swiper
      	
     }
 })
